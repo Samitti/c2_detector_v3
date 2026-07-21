@@ -1,0 +1,8 @@
+pandas
+numpy
+xgboost
+shap
+scikit-learn
+matplotlib
+cicflowmeter
+pyshark
