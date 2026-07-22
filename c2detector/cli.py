@@ -58,8 +58,8 @@ def build_parser():
     r.set_defaults(func=predict_pcap_command)
 
     s=sub.add_parser("self-test")
-    s.add_argument("--workdir",type=Path,default=Path("v32_self_test"))
-    s.add_argument("--log-output",type=Path,default=Path("v32_self_test/output/logs/detector.log"))
+    s.add_argument("--workdir",type=Path,default=Path("self_test"))
+    s.add_argument("--log-output",type=Path,default=Path("self_test/output/logs/detector.log"))
     s.set_defaults(func=self_test_command)
     return p
 

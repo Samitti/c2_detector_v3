@@ -1,0 +1,336 @@
+{
+  "report_metadata": {
+    "generated_at_utc": "2026-07-22T01:53:07.018221+00:00",
+    "tool": "C2 Traffic Detector v1.0.1",
+    "purpose": "Research evaluation of encrypted C2 flow detection"
+  },
+  "data_provenance": {
+    "cicids_benign_file": "data/cicids2017/MachineLearningCVE/Monday-WorkingHours.pcap_ISCX.csv",
+    "cicids_botnet_file": "data/cicids2017/MachineLearningCVE/Friday-WorkingHours-Morning.pcap_ISCX.csv",
+    "ctu13_file": "data/ctu13/ctu13_flows/botnet-capture-20110810-neris.pcap_Flow.csv",
+    "benign_labeling": {
+      "source": "data/cicids2017/MachineLearningCVE/Monday-WorkingHours.pcap_ISCX.csv",
+      "label_method": "mapped from Label",
+      "unknown_rows_excluded": 0,
+      "rows_used": 529918
+    },
+    "botnet_labeling": {
+      "source": "data/cicids2017/MachineLearningCVE/Friday-WorkingHours-Morning.pcap_ISCX.csv",
+      "label_method": "mapped from Label",
+      "unknown_rows_excluded": 0,
+      "rows_used": 191033
+    },
+    "feature_count": 67,
+    "feature_names": [
+      "Destination Port",
+      "Flow Duration",
+      "Total Fwd Packets",
+      "Total Backward Packets",
+      "Total Length of Fwd Packets",
+      "Total Length of Bwd Packets",
+      "Fwd Packet Length Max",
+      "Fwd Packet Length Min",
+      "Fwd Packet Length Mean",
+      "Fwd Packet Length Std",
+      "Bwd Packet Length Max",
+      "Bwd Packet Length Min",
+      "Bwd Packet Length Mean",
+      "Bwd Packet Length Std",
+      "Flow Bytes/s",
+      "Flow Packets/s",
+      "Flow IAT Mean",
+      "Flow IAT Std",
+      "Flow IAT Max",
+      "Flow IAT Min",
+      "Fwd IAT Total",
+      "Fwd IAT Mean",
+      "Fwd IAT Std",
+      "Fwd IAT Max",
+      "Fwd IAT Min",
+      "Bwd IAT Total",
+      "Bwd IAT Mean",
+      "Bwd IAT Std",
+      "Bwd IAT Max",
+      "Bwd IAT Min",
+      "Fwd PSH Flags",
+      "Fwd Header Length",
+      "Bwd Header Length",
+      "Fwd Packets/s",
+      "Bwd Packets/s",
+      "Min Packet Length",
+      "Max Packet Length",
+      "Packet Length Mean",
+      "Packet Length Std",
+      "Packet Length Variance",
+      "FIN Flag Count",
+      "SYN Flag Count",
+      "RST Flag Count",
+      "PSH Flag Count",
+      "ACK Flag Count",
+      "URG Flag Count",
+      "ECE Flag Count",
+      "Down/Up Ratio",
+      "Average Packet Size",
+      "Avg Fwd Segment Size",
+      "Avg Bwd Segment Size",
+      "Subflow Fwd Packets",
+      "Subflow Fwd Bytes",
+      "Subflow Bwd Packets",
+      "Subflow Bwd Bytes",
+      "Init_Win_bytes_forward",
+      "Init_Win_bytes_backward",
+      "act_data_pkt_fwd",
+      "min_seg_size_forward",
+      "Active Mean",
+      "Active Std",
+      "Active Max",
+      "Active Min",
+      "Idle Mean",
+      "Idle Std",
+      "Idle Max",
+      "Idle Min"
+    ],
+    "feature_profile": "all-cleaned",
+    "cleaning": {
+      "non_finite_values_replaced": 894,
+      "missing_or_non_numeric_values_imputed": 1538,
+      "invalid_values_by_feature": {
+        "Flow Duration": 15,
+        "Flow Bytes/s": 9,
+        "Flow Packets/s": 15,
+        "Flow IAT Mean": 15,
+        "Flow IAT Max": 15,
+        "Flow IAT Min": 512,
+        "Fwd Header Length": 23,
+        "Bwd Header Length": 17,
+        "min_seg_size_forward": 23
+      },
+      "invalid_values_total": 644,
+      "imputation_method": "training/source median, then zero only when median unavailable",
+      "feature_profile": "all-cleaned",
+      "duplicate_features_removed": [
+        "Fwd Header Length.1"
+      ],
+      "constant_columns_detected": 10,
+      "constant_columns_removed": 10,
+      "constant_column_names": [
+        "Bwd PSH Flags",
+        "Fwd URG Flags",
+        "Bwd URG Flags",
+        "CWE Flag Count",
+        "Fwd Avg Bytes/Bulk",
+        "Fwd Avg Packets/Bulk",
+        "Fwd Avg Bulk Rate",
+        "Bwd Avg Bytes/Bulk",
+        "Bwd Avg Packets/Bulk",
+        "Bwd Avg Bulk Rate"
+      ],
+      "quality_rows": [
+        {
+          "feature": "Bwd Header Length",
+          "invalid_negative_or_range_values": 17
+        },
+        {
+          "feature": "Flow Bytes/s",
+          "invalid_negative_or_range_values": 9
+        },
+        {
+          "feature": "Flow Duration",
+          "invalid_negative_or_range_values": 15
+        },
+        {
+          "feature": "Flow IAT Max",
+          "invalid_negative_or_range_values": 15
+        },
+        {
+          "feature": "Flow IAT Mean",
+          "invalid_negative_or_range_values": 15
+        },
+        {
+          "feature": "Flow IAT Min",
+          "invalid_negative_or_range_values": 512
+        },
+        {
+          "feature": "Flow Packets/s",
+          "invalid_negative_or_range_values": 15
+        },
+        {
+          "feature": "Fwd Header Length",
+          "invalid_negative_or_range_values": 23
+        },
+        {
+          "feature": "min_seg_size_forward",
+          "invalid_negative_or_range_values": 23
+        }
+      ]
+    }
+  },
+  "internal_cicids2017_evaluation": {
+    "accuracy": 0.9998871936602837,
+    "roc_auc": 0.9999969509056434,
+    "false_positive_rate": 9.435386473429952e-05,
+    "false_negative_rate": 0.005089058524173028,
+    "confusion_matrix": {
+      "tn": 105974,
+      "fp": 10,
+      "fn": 2,
+      "tp": 391
+    },
+    "classification_report": {
+      "benign": {
+        "precision": 0.9999811278025214,
+        "recall": 0.9999056461352657,
+        "f1-score": 0.9999433855444424,
+        "support": 105984.0
+      },
+      "c2_malicious": {
+        "precision": 0.9750623441396509,
+        "recall": 0.9949109414758269,
+        "f1-score": 0.9848866498740554,
+        "support": 393.0
+      },
+      "accuracy": 0.9998871936602837,
+      "macro avg": {
+        "precision": 0.9875217359710862,
+        "recall": 0.9974082938055463,
+        "f1-score": 0.9924150177092489,
+        "support": 106377.0
+      },
+      "weighted avg": {
+        "precision": 0.9998890676581339,
+        "recall": 0.9998871936602837,
+        "f1-score": 0.9998877598253635,
+        "support": 106377.0
+      }
+    },
+    "support": 106377
+  },
+  "external_ctu13_evaluation": {
+    "accuracy": 0.0,
+    "roc_auc": null,
+    "false_positive_rate": null,
+    "false_negative_rate": 1.0,
+    "confusion_matrix": {
+      "tn": 0,
+      "fp": 0,
+      "fn": 22249,
+      "tp": 0
+    },
+    "classification_report": {
+      "benign": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "c2_malicious": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 22249.0
+      },
+      "accuracy": 0.0,
+      "macro avg": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 22249.0
+      },
+      "weighted avg": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 22249.0
+      }
+    },
+    "support": 22249,
+    "labeling": {
+      "source": "data/ctu13/ctu13_flows/botnet-capture-20110810-neris.pcap_Flow.csv",
+      "label_method": "explicit all-malicious assumption",
+      "unknown_rows_excluded": 0,
+      "rows_used": 22249
+    },
+    "cleaning": {
+      "non_finite_values_replaced": 2,
+      "missing_or_non_numeric_values_imputed": 3,
+      "invalid_values_by_feature": {
+        "Flow IAT Min": 1
+      },
+      "invalid_values_total": 1,
+      "imputation_method": "training/source median, then zero only when median unavailable",
+      "feature_profile": "all-cleaned",
+      "duplicate_features_removed": [],
+      "constant_columns_detected": 9,
+      "constant_columns_removed": 0,
+      "constant_column_names": [
+        "Bwd PSH Flags",
+        "Fwd URG Flags",
+        "Bwd URG Flags",
+        "URG Flag Count",
+        "CWE Flag Count",
+        "ECE Flag Count",
+        "Fwd Avg Bytes/Bulk",
+        "Fwd Avg Packets/Bulk",
+        "Fwd Avg Bulk Rate"
+      ],
+      "quality_rows": [
+        {
+          "feature": "Flow IAT Min",
+          "invalid_negative_or_range_values": 1
+        }
+      ]
+    },
+    "feature_alignment": {
+      "training_feature_count": 67,
+      "source_feature_count": 77,
+      "matched_feature_count": 67,
+      "coverage_ratio": 1.0,
+      "missing_features_filled_with_zero": [],
+      "extra_features_dropped": [
+        "Bwd PSH Flags",
+        "Fwd URG Flags",
+        "Bwd URG Flags",
+        "CWE Flag Count",
+        "Fwd Avg Bytes/Bulk",
+        "Fwd Avg Packets/Bulk",
+        "Fwd Avg Bulk Rate",
+        "Bwd Avg Bytes/Bulk",
+        "Bwd Avg Packets/Bulk",
+        "Bwd Avg Bulk Rate"
+      ],
+      "features_with_large_distribution_shift": 21,
+      "alignment_report": "output/validation/feature_alignment_report.csv",
+      "distribution_report": "output/validation/feature_distribution_report.csv"
+    },
+    "dataset": "data/ctu13/ctu13_flows/botnet-capture-20110810-neris.pcap_Flow.csv",
+    "probability_distribution_report": "output/validation/ctu_probability_distribution.csv"
+  },
+  "global_explainability": {
+    "method": "SHAP TreeExplainer",
+    "plot": "output/shap/shap_summary.png",
+    "top_features": [
+      "Destination Port",
+      "Init_Win_bytes_forward",
+      "Init_Win_bytes_backward",
+      "Bwd Packet Length Mean",
+      "Flow IAT Min",
+      "Fwd Header Length",
+      "Flow Duration",
+      "Bwd Packets/s",
+      "min_seg_size_forward",
+      "PSH Flag Count"
+    ]
+  },
+  "limitations": [
+    "Research prototype only; not operational certification.",
+    "External FPR cannot be measured when CTU-13 is treated as malicious-only."
+  ],
+  "output_files": {
+    "model": "output/models/c2_model.json",
+    "training_report": "output/reports/training_report.json",
+    "feature_alignment_report": "output/validation/feature_alignment_report.csv",
+    "feature_distribution_report": "output/validation/feature_distribution_report.csv",
+    "ctu_probability_report": "output/validation/ctu_probability_distribution.csv",
+    "data_quality_report": "output/validation/data_quality_report.csv"
+  }
+}

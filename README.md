@@ -1,4 +1,4 @@
-# Encrypted C2 Traffic Detector v3.2
+# Encrypted C2 Traffic Detector
 
 ![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)
 ![XGBoost](https://img.shields.io/badge/XGBoost-ML-success.svg)
@@ -8,7 +8,7 @@
 
 ## Overview
 
-**Encrypted C2 Traffic Detector v3.2** is a machine learning-based digital forensic tool developed for the **CIS*6520 – Advanced Digital Forensics & Incident Response** course at the **University of Guelph**.
+**Encrypted C2 Traffic Detector** is a machine learning-based digital forensic tool developed for the **CIS*6520 – Advanced Digital Forensics & Incident Response** course at the **University of Guelph**.
 
 The project investigates whether encrypted Command-and-Control (C2) traffic can be detected **without decrypting network traffic**, while providing explainable results suitable for digital forensic investigations.
 
@@ -91,7 +91,7 @@ National Cybercrime Coordination Centre (NC3)
 # Project Structure
 
 ```
-c2_detector_v3/
+c2_detector/
 
 │
 ├── c2_detector.py

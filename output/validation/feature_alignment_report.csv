@@ -1,0 +1,78 @@
+feature,required_by_model,present_in_source,action
+Destination Port,True,True,used
+Flow Duration,True,True,used
+Total Fwd Packets,True,True,used
+Total Backward Packets,True,True,used
+Total Length of Fwd Packets,True,True,used
+Total Length of Bwd Packets,True,True,used
+Fwd Packet Length Max,True,True,used
+Fwd Packet Length Min,True,True,used
+Fwd Packet Length Mean,True,True,used
+Fwd Packet Length Std,True,True,used
+Bwd Packet Length Max,True,True,used
+Bwd Packet Length Min,True,True,used
+Bwd Packet Length Mean,True,True,used
+Bwd Packet Length Std,True,True,used
+Flow Bytes/s,True,True,used
+Flow Packets/s,True,True,used
+Flow IAT Mean,True,True,used
+Flow IAT Std,True,True,used
+Flow IAT Max,True,True,used
+Flow IAT Min,True,True,used
+Fwd IAT Total,True,True,used
+Fwd IAT Mean,True,True,used
+Fwd IAT Std,True,True,used
+Fwd IAT Max,True,True,used
+Fwd IAT Min,True,True,used
+Bwd IAT Total,True,True,used
+Bwd IAT Mean,True,True,used
+Bwd IAT Std,True,True,used
+Bwd IAT Max,True,True,used
+Bwd IAT Min,True,True,used
+Fwd PSH Flags,True,True,used
+Fwd Header Length,True,True,used
+Bwd Header Length,True,True,used
+Fwd Packets/s,True,True,used
+Bwd Packets/s,True,True,used
+Min Packet Length,True,True,used
+Max Packet Length,True,True,used
+Packet Length Mean,True,True,used
+Packet Length Std,True,True,used
+Packet Length Variance,True,True,used
+FIN Flag Count,True,True,used
+SYN Flag Count,True,True,used
+RST Flag Count,True,True,used
+PSH Flag Count,True,True,used
+ACK Flag Count,True,True,used
+URG Flag Count,True,True,used
+ECE Flag Count,True,True,used
+Down/Up Ratio,True,True,used
+Average Packet Size,True,True,used
+Avg Fwd Segment Size,True,True,used
+Avg Bwd Segment Size,True,True,used
+Subflow Fwd Packets,True,True,used
+Subflow Fwd Bytes,True,True,used
+Subflow Bwd Packets,True,True,used
+Subflow Bwd Bytes,True,True,used
+Init_Win_bytes_forward,True,True,used
+Init_Win_bytes_backward,True,True,used
+act_data_pkt_fwd,True,True,used
+min_seg_size_forward,True,True,used
+Active Mean,True,True,used
+Active Std,True,True,used
+Active Max,True,True,used
+Active Min,True,True,used
+Idle Mean,True,True,used
+Idle Std,True,True,used
+Idle Max,True,True,used
+Idle Min,True,True,used
+Bwd Avg Bulk Rate,False,True,dropped_extra
+Bwd Avg Bytes/Bulk,False,True,dropped_extra
+Bwd Avg Packets/Bulk,False,True,dropped_extra
+Bwd PSH Flags,False,True,dropped_extra
+Bwd URG Flags,False,True,dropped_extra
+CWE Flag Count,False,True,dropped_extra
+Fwd Avg Bulk Rate,False,True,dropped_extra
+Fwd Avg Bytes/Bulk,False,True,dropped_extra
+Fwd Avg Packets/Bulk,False,True,dropped_extra
+Fwd URG Flags,False,True,dropped_extra

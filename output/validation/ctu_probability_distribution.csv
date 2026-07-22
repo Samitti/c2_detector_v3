@@ -1,0 +1,10 @@
+statistic,value
+minimum,1.56163622477834e-07
+median,1.4192349908626056e-06
+mean,2.7791005777544342e-05
+maximum,0.07209890335798264
+flows_at_or_above_0.10,0.0
+flows_at_or_above_0.25,0.0
+flows_at_or_above_0.50,0.0
+flows_at_or_above_0.75,0.0
+flows_at_or_above_0.90,0.0

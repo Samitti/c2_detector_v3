@@ -1,7 +1,7 @@
 from pathlib import Path
 
 APP_NAME = "C2 Traffic Detector"
-APP_VERSION = "3.2"
+APP_VERSION = "1.0.1"
 RANDOM_STATE = 42
 
 DEFAULT_CICIDS_DIR = Path("data/cicids2017/MachineLearningCVE")
