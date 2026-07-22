@@ -1,9 +1,1 @@
-2026-07-21 21:50:42,935 INFO Started C2 Traffic Detector v0.1.1 command=train
-2026-07-21 21:52:38,147 INFO Started C2 Traffic Detector v1.0.1 command=train
-2026-07-21 22:00:11,289 INFO Started C2 Traffic Detector v1.0.1 command=predict
-2026-07-21 22:00:31,982 INFO Started C2 Traffic Detector v1.0.1 command=predict
-2026-07-21 22:01:20,380 INFO Started C2 Traffic Detector v1.0.1 command=predict
-2026-07-21 22:02:43,363 INFO Started C2 Traffic Detector v1.0.1 command=predict-pcap
-2026-07-21 22:03:26,827 INFO Started C2 Traffic Detector v1.0.1 command=predict-pcap
-2026-07-21 22:04:57,756 INFO Started C2 Traffic Detector v1.0.1 command=predict-pcap
-2026-07-21 22:04:57,756 INFO Running flow extractor: ['/home/kali/Desktop/c2_detector/.venv/bin/cicflowmeter', '-f', '/home/kali/Desktop/c2_detector/suspect/botnet-capture-20110810-neris.pcap', '-c', 'output/flows/botnet-capture-20110810-neris_Flow.csv']
+2026-07-21 22:25:30,807 INFO Started C2 Traffic Detector v1.0.1 command=train
